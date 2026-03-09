@@ -4,6 +4,9 @@
   box-sizing: border-box;
   font-family: "Poppins", sans-serif;
 }
+html {
+  font-size: 62.5%;
+}
 .container {
   font-family: "Open Sans", sans-serif;
   background-image: url("./images/bg-desktop.svg");
@@ -11,10 +14,12 @@
   background-size: cover;
   background-position: center;
   height: 100vh;
+  width: 100%;
   display: flex;
   flex-direction: column;
   justify-content: center;
   background-color: hsl(257, 40%, 49%);
+  /* flex-wrap: wrap; */
 }
 /* HEADER LOGO */
 header {
@@ -34,10 +39,16 @@ header {
   align-items: center;
   gap: 3rem;
   padding: 0 50px;
+  /* flex-wrap: wrap; */
+  flex-shrink: 1;
 }
 .main_image_mockup {
   width: 650px;
   height: auto;
+}
+.main_image {
+  flex-grow: 1;
+  flex-shrink: 1;
 }
 .main_container_content {
   display: flex;
@@ -47,13 +58,15 @@ header {
   padding-bottom: 120px;
   color: white;
   font-family: "Open Sans", sans-serif;
+  flex-grow: 1;
+  /* flex-shrink: 1; */
 }
 h1 {
-  font-size: 2.3rem;
+  font-size: 4.5rem;
   font-weight: 600;
 }
 p {
-  font-size: 1rem;
+  font-size: 1.6rem;
   color: white;
   font-weight: 400;
   line-height: 1.5;
@@ -62,10 +75,10 @@ p {
   background-color: white;
   color: hsl(257, 40%, 49%);
   padding: 0.8rem 2.5rem;
-  border-radius: 50px;
-  font-size: 1rem;
+  border-radius: 5rem;
+  font-size: 1.6rem;
   font-weight: 500;
-  width: 180px;
+  width: 18rem;
   border: 2px solid white;
 }
 .btn:hover {
@@ -78,7 +91,7 @@ p {
   color: hsl(257, 40%, 49%);
   text-decoration: none;
   font-weight: 500;
-  font-size: 1rem;
+  font-size: 1.6rem;
 }
 .register_btn:hover {
   color: hsl(300, 69%, 71%);
@@ -92,18 +105,60 @@ p {
   gap: 1.5rem;
   margin-bottom: 1rem;
   position: absolute;
-  left: 1130px;
-  top: 570px;
+  left: 113rem;
+  top: 57rem;
 }
 .icons {
   background-color: hsl(257, 40%, 49%);
   color: white;
   padding: 0.5rem;
-  height: 40px;
-  width: 40px;
+  height: 4rem;
+  width: 4rem;
   border-radius: 50%;
   border: 2px solid white;
   display: flex;
   justify-content: center;
   align-items: center;
+  font-size: 1.6rem;
+}
+
+/* RESONSIVENESS */
+@media (max-width: 1200px) {
+  .container {
+    height: auto;
+    background-image: url("./images/bg-mobile.svg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+  }
+  .main_container {
+    flex-direction: column;
+    gap: 2rem;
+    justify-content: center;
+    align-items: center;
+  }
+  .main_container_content {
+    align-items: center;
+    text-align: center;
+  }
+  .main_image_mockup {
+    width: 100%;
+    height: auto;
+  }
+  .socials {
+    position: static;
+    justify-content: center;
+    margin-top: 2rem;
+  }
+}
+
+@media (max-width: 600px) {
+  html {
+    font-size: 55%;
+  }
+}
+@media (max-width: 550px) {
+  html {
+    font-size: 50%;
+  }
 }
