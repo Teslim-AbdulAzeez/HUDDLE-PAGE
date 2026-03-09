@@ -85,3 +85,25 @@ p {
   text-decoration: none;
   color: white;
 }
+
+/* SOCIALS */
+.socials {
+  display: flex;
+  gap: 1.5rem;
+  margin-bottom: 1rem;
+  position: absolute;
+  left: 1130px;
+  top: 570px;
+}
+.icons {
+  background-color: hsl(257, 40%, 49%);
+  color: white;
+  padding: 0.5rem;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  border: 2px solid white;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
